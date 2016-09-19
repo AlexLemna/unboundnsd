@@ -1,14 +1,14 @@
 unbound:
     build: unbound
-    hostname: unbound.mock.zknt.org
+    hostname: unbound
     dns: 127.0.0.1
     links:
-        - nsd:nsd.mock.zknt.org
+      - nsd
     volumes:
-        - "./unbound.conf:/etc/unbound/unbound.conf:ro"
+      - "./unbound-local.conf:/unbound-local.conf:ro"
 nsd:
     build: nsd
-    hostname: nsd.mock.zknt.org
+    hostname: nsd
     volumes:
-        - "./zones:/zones"
-        - "./nsd.conf:/etc/nsd/nsd.conf:ro"
+      - "./zones:/zones"
+      - "./nsd-local.conf:/etc/nsd/nsd-local.conf:ro"

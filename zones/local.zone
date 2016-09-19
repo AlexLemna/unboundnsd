@@ -1,0 +1,11 @@
+$ORIGIN local.
+$TTL 1800
+@ SOA nsd. hostmaster.nsd. (
+                2016091901
+                3600
+                900
+                1209600
+                1800
+        )
+        NS      nsd.
+foo     A       192.168.0.1

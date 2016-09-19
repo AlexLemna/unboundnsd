@@ -1,12 +1,11 @@
 $ORIGIN 168.192.in-addr.arpa.
 $TTL 1800
-@       IN      SOA     ns1.mock.zknt.org.      hostmaster.zknt.org. (
-        2014070201        ; serial number
-        3600                    ; refresh
-        900                     ; retry
-        1209600                 ; expire
-        1800                    ; ttl
+@       SOA     nsd.      hostmaster.nsd. (
+        2016091901
+        3600
+        900
+        1209600
+        1800
         )
-        IN      NS      ns1.mock.zknt.org.
-
-1.0            IN      PTR     foo.bar.
+        NS      nsd.
+1.0     PTR     foo.local.
